@@ -1,0 +1,45 @@
+ <!-- <div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">Sign In</mat-toolbar>
+        <form fxLayoutAlign="stretch" fxLayout="column">
+            <mat-form-field  appearance="fill">
+              <input matInput placeholder="Username:" name="email" >
+            </mat-form-field>
+          
+            <mat-form-field  appearance="fill">
+                <input matInput type="password" placeholder="Password:" name="password" >
+            </mat-form-field>
+
+            <button routerLink="/login" mat-raised-button type="submit" >Login</button>
+          </form>          
+    </mat-card>
+</div> 
+
+<router-outlet></router-outlet>
+  -->
+
+
+
+<div class="form-container mat-elevation-z5" fxFlex="30">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm">
+    <mat-form-field>
+      <input matInput placeholder="Email Address" formControlName="email" >
+      <mat-error *ngIf="email?.errors?.['required']">Email is required!</mat-error>
+      <!-- <mat-error *ngIf="email?.errors?.['required']">Please enter the correct email format!</mat-error> -->
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Password" type="password" formControlName="password" >
+      <mat-error *ngIf="password?.errors?.['required']">Password is required!</mat-error> 
+    </mat-form-field>
+  
+<div class="center maring-top">
+  <button mat-raised-button color="primary" type="submit">Login</button>
+</div>    
+
+    <span class="center margin-top">New to our platform? <a class="sign-up-link" routerLink="user-sign-up">Sign Up!</a></span>
+  </form>
+
+</div>
