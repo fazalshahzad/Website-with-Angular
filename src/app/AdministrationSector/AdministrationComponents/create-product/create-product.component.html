@@ -1,0 +1,61 @@
+<div class="container">
+	<h1 class="text-center">Add new product on website page</h1>
+	<form (ngSubmit)="submitPF()" class="uswa my-5" [formGroup]="createProductForm">
+
+		<div class="mb-3">
+		  <label for="exampleInputPassword1" class="form-label">Product Name</label>
+		  <input type="text" class="form-control" id="exampleInputPassword1" formControlName="Name">
+
+		  <div class="error  text-danger"
+		  *ngIf="createProductForm.controls['Name'].invalid && (createProductForm.controls['Name'].dirty || createProductForm.controls['Name'].touched)">
+		  <span *ngIf="createProductForm.controls['Name'].errors.minlength || createProductForm.controls['Name'].errors.maxlength ">
+			<small>Name between 1 to 25 Characters!</small></span>
+		  <span *ngIf="(createProductForm.controls['Name'].errors.pattern)">
+			Only Alphabets & Spaces Allowed</span>
+		  <span *ngIf="createProductForm.controls['Name'].errors.required">
+			<small>Field Required!</small>
+		  </span>
+		  </div>
+
+		</div>
+
+
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Description</label>
+			<input type="text" class="form-control" id="exampleInputPassword1" formControlName="Des">
+		  </div>
+
+		  <div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Price</label>
+			<input type="number" class="form-control" id="exampleInputPassword1" formControlName="Price">
+
+			<div class="error  text-danger"
+			*ngIf="createProductForm.controls['Name'].invalid && (createProductForm.controls['Name'].dirty || createProductForm.controls['Name'].touched)">
+			<span *ngIf="createProductForm.controls['Name'].errors.minlength || createProductForm.controls['Name'].errors.maxlength ">
+			  <small>Name between 4 to 20 characters!</small></span>
+			<span *ngIf="(createProductForm.controls['Name'].errors.pattern)">
+			  Only Numbers are allowed!</span>
+			<span *ngIf="createProductForm.controls['Name'].errors.required">
+			  <small>Field Required!</small>
+			</span>
+			</div>
+		
+		  </div>	  
+
+	
+	    <div class="mb-3 form-check">
+		  <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="LimitedStock">
+		  <label class="form-check-label" for="exampleCheck1">Add 'Limited Stock'</label>
+		</div> 
+
+		<div class="mb-3 form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="Discount">
+			<label class="form-check-label" for="exampleCheck1">Add 'Discount'</label>
+		</div> 
+		
+		<input type="text" type="file" (change)="uploadImage($event)"><br>
+		<button type="submit" class="btn btn-primary my-5"
+		[disabled]="createProductForm.pristine || createProductForm.invalid"
+		>Submit</button>	 
+	 </form>
+</div>

@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './MainPageComponents/navbar/navbar.component';
-import { HomeComponent } from './MainPageComponents/home/home.component';
 import { FooterComponent } from './MainPageComponents/footer/footer.component';
 import { UserLoginComponent } from './UserSection/user-login/user-login.component';
 import { UserSignUpComponent } from './UserSection/user-sign-up/user-sign-up.component';
@@ -18,7 +16,18 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductsComponent } from './MainPageComponents/products/products.component';
 import { GalleryComponent } from './MainPageComponents/gallery/gallery.component';
-import { LandingComponent } from './UserSection/landing/landing.component';
+import { HomeComponent } from './MainPageComponents/home/home.component';
+import { CartComponent } from './CartSection/cart/cart.component';
+import { ToastrModule } from 'ngx-toastr';
+import { AdminDefaultModule } from './AdministrationSector/admin-default/admin-default.module';
+import { RouterModule } from '@angular/router';
+import { CreateProductComponent } from './AdministrationSector/AdministrationComponents/create-product/create-product.component';
+// import { LandingComponent } from './UserSection/landing/landing.component';
+// import { AngularFireModule } from '@angular/fire/compat';
+// import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+// import { environment } from '../environments/environment';
+// import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 
 
@@ -31,26 +40,43 @@ import { LandingComponent } from './UserSection/landing/landing.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
     FooterComponent,
     UserLoginComponent,
     UserSignUpComponent,
     ProductsComponent,
     GalleryComponent,
-    LandingComponent
+    HomeComponent,
+    CartComponent, //must remember to remove all declaration of private sector like dashboard!
+    
+    
+  
+    // LandingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    RouterModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    FormsModule,
-    ReactiveFormsModule
+    // AngularFireModule.initializeApp(environment.Firebase),
+    // AngularFireAnalyticsModule,
+    // AngularFirestoreModule
+    ToastrModule.forRoot(
+      {maxOpened:1,
+      autoDismiss:true}
+    ),
+    AdminDefaultModule
+
+    
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

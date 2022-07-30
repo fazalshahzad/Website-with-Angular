@@ -1,0 +1,70 @@
+[
+    {
+      "_id":1,
+      "Name":"Binocular",
+      "Image":[
+      "https://www.barska.com/images/thumbs/0045585_20x-40x-100mm-wp-encounter-jumbo-binocular-telescope-by-barska.jpeg"
+      ],
+      "Description":"Best selling Celestial binoculars.",
+      "price":"$300",
+      "qty":0,
+      "NewQuantity":0
+    },
+    {
+      "_id":2,
+      "Name":"Celectron Refractor",
+      "Image":[
+      "https://www.bhphotovideo.com/images/images2500x2500/celestron_21049_powerseeker_127eq_127mm_f_8_370185.jpg"
+      ],
+      "Description":"Best Celestron refractors.",
+      "price":"$780",
+      "qty":12,
+      "NewQuantity":0
+    },
+    {
+      "_id":3,
+      "Name":"Celectron Reflector",
+      "Image":[
+      "https://m.media-amazon.com/images/I/41n5lPDMENL.jpg"
+      ],
+      "Description":"Best Celestron reflectors.",
+      "price":"$892",
+      "qty":0,
+      "NewQuantity":0
+    },
+    {
+      "_id":4,
+      "Name":"Solar Viewing Spectacle",
+      "Image":[
+        "https://m.media-amazon.com/images/I/71eIdfYC-qL._SL1500_.jpg"
+      ],
+      "Description":"Safe solar eclipse showing spectacles.",
+      "price":"$1",
+      "qty":100,
+      "NewQuantity":0
+    },
+    {
+      "_id":5,
+      "Name":"Telescope",
+      "Image":[
+        "https://nineplanets.org/wp-content/uploads/2020/01/Celestron-70mm-Travel-Scope-Portable-Refractor-Telescope.jpg"
+      ],
+      "Description":"Small moon telescopes for kids.",
+      "price":"$54",
+      "qty":17,
+      "NewQuantity":0
+    },
+    {
+      "_id":6,
+      "Name":"Vintage Telescope",
+      "Image":[
+        "https://media.istockphoto.com/photos/antique-naval-spyglass-telescope-on-a-white-background-picture-id1357099967?b=1&k=20&m=1357099967&s=170667a&w=0&h=QS3pKHxl5IX5Vb1kp12idE9iB8kc_kdwCuDD7-sZXVo="
+      ],
+      "Description":"Buy vintage telescopes.",
+      "price":"$2",
+      "stock":"Limited Stock!",
+      "qty":9,
+      "NewQuantity":0
+    }
+    
+  ]

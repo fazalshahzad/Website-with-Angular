@@ -1,0 +1,28 @@
+<div class="container bg-dark text-white">
+    <div *ngIf="showBox===true">
+        <div *ngFor="let _data of lsOfCart">
+            <img [src]="_data.Image[0]" alt="" class="w-25 h-25">
+            <p>SelectedQuantity:{{_data.NewQuantity}}</p>
+        </div>
+        <p>TotalCartQuantity:{{cartQuantity}}</p>
+    </div>
+    <div *ngIf="showBox===false">
+        <h3 class="text-danger">Nothing Has Selected</h3>
+    </div>
+</div>
+<div class="container">
+    <button class="btn btn-outline-primary mx-3" (click)="addItem()">+</button>
+    <button class="btn btn-outline-primary" (click)="subItem( )">-</button>
+    <div class="container bg-light" *ngIf="showCart !== false">
+        <img [src]="filteredDBElement[0].Image[0]" alt="">
+        <p>Quantity:{{cartQuantity}}</p>
+        <button class="btn btn-outline-primary mx-3">+</button>
+        <button class="btn btn-outline-primary">-</button>
+    </div>
+</div>
+<div class="container">
+    <h1>Name: {{filteredDBElement[0].Name}}</h1>
+    <h3>Quantity: {{filteredDBElement[0].qty}}</h3>
+    <p>Description: {{filteredDBElement[0].Description}}</p>
+    <img *ngFor="let _data of filteredDBElement[0].Image" [src]="_data" alt="">
+</div>

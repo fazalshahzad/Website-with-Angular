@@ -2,3 +2,12 @@
     font-size: 21;
     text-align: center;
 }
+#bg{
+    background-image: url(ufo.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 17%;
+    overflow: auto;
+    /* max-width: 100%;
+    max-height: 100%; */
+}

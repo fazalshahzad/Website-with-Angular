@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; 
+       font-family: oswald; 
+       background-image: url(../src/app/MainPageComponents/footer/dark-space.png);
+       background-size: cover;
+       background-attachment: fixed;
+       
+       
+    }
 
 
 .form-container{
@@ -24,4 +31,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .text-center{
     text-align: center;
+}
+
+
+
+
+
+
+  
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+textarea.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+input.ng-valid.ng-touched{
+border: 2px solid green;
+}
+
+textarea.ng-valid.ng-touched{
+border: 2px solid green;
+}
+
+select.ng-invalid.ng-touched {
+border: 2px solid red;
+}
+
+select.ng-valid.ng-touched{
+border: 2px solid green;
 }

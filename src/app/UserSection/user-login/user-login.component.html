@@ -20,8 +20,9 @@
 
 
 
-<div class="form-container mat-elevation-z5" fxFlex="30">
-  <h1>Login</h1>
+<div id="bg" class="form-container mat-elevation-z5"  fxFlex="70" style="margin-top: 10%; margin-bottom: 6%;">
+  <h1 class="text my-5">Sign In</h1>
+  <!-- <i class="fas fa-user-alien col-12"></i> -->
   <form [formGroup]="loginForm">
     <mat-form-field>
       <input matInput placeholder="Email Address" formControlName="email" >
@@ -30,16 +31,16 @@
 
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field class="text my-2">
       <input matInput placeholder="Password" type="password" formControlName="password" >
       <mat-error *ngIf="password?.errors?.['required']">Password is required!</mat-error> 
     </mat-form-field>
   
-<div class="center maring-top">
-  <button mat-raised-button color="primary" type="submit">Login</button>
+<div class="center maring-top my-3">
+  <button mat-raised-button color="primary" type="submit">Sign In</button>
 </div>    
 
-    <span class="center margin-top">New to our platform? <a class="sign-up-link" routerLink="user-sign-up">Sign Up!</a></span>
+    <span class="center margin-top my-4 mb-0">New to our Planet? &nbsp; <a class="sign-up-link" routerLink="user-sign-up">Register Now!</a></span>
   </form>
 
 </div>

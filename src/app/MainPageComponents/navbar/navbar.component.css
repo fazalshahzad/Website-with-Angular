@@ -14,13 +14,16 @@ body {
   
   .header {
     
-    background-color: black;
-    opacity: 90%;
+    /* background-color: black; */
+    /* opacity: 94%; */
+    background: rgb(32,16,106);
+background: linear-gradient(90deg, rgba(9, 4, 36, 0.95) 35%, rgba(192,0,255,1) 100%);
     color: grey;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-    position: fixed;
+    position:fixed;
     width: 100%;
     z-index: 3;
+  
   }
   
   .header ul {
@@ -35,16 +38,16 @@ body {
   .header li a {
     display: block;
     padding: 20px 20px;
-    /* border-right: 1px solid #f4f4f4; */
+    border-left: 0.1px solid #000000;
     text-decoration: none;
-    color: rgb(223, 223, 223);
+    color: black !important;
   }
   
   .header li a:hover,
   .header .menu-btn:hover {
-    background-color: white;
+    background-color:  rgba(101,9,121,0.8407738095238095);
     /* opacity: 90%; */
-    color: black;
+    color: white !important;
   }
   
   .header .logo {

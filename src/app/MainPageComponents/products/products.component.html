@@ -1,1 +1,27 @@
-<p>products works!</p>
+<div class="container">
+  <div class="row">
+    <h1 id="h1" class="text-center my-5">Available Products</h1>
+    <div class="col col-lg-4 my-5" *ngFor="let _data of dataArray; let i = index">
+      <div class="embed-responsive embed-responsive-1by1">
+        <div class="card" style="width: 18rem;">
+
+          <img [src]="_data.Image" class="card-img-top" alt="...">
+          <div class="card-body">
+
+            <h5 class="card-title">{{_data.Name}}</h5>
+            <p class="card-text">{{_data.Description}}</p>
+            <p class="card-text">{{_data.price}}</p>
+            <p class="card-text">Available Quantity: {{_data.qty}}</p>
+            <p class="card-text-danger">{{_data.stock}}</p>
+
+            <button ion-button block type="button" class="btn btn-outline-primary w-100" (click)="go2CartPage(_data._id)"
+              [ngClass]="_data.qty === 0 ? 'btn-outline-danger' : 'btn-outline-success'"
+              [disabled]="_data.qty === 0">{{_data.qty === 0 ? 'Sold Out' : 'Add to Cart'}}
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
