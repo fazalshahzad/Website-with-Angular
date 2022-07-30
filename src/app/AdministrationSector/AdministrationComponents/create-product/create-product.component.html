@@ -1,5 +1,5 @@
-<div class="container">
-	<h1 class="text-center">Add new product on website page</h1>
+<div class="container my-3">
+	<h1 class="text-center">Add new product on website page</h1><hr>
 	<form (ngSubmit)="submitPF()" class="uswa my-5" [formGroup]="createProductForm">
 
 		<div class="mb-3">
@@ -56,6 +56,6 @@
 		<input type="text" type="file" (change)="uploadImage($event)"><br>
 		<button type="submit" class="btn btn-primary my-5"
 		[disabled]="createProductForm.pristine || createProductForm.invalid"
-		>Submit</button>	 
+		(click)="submitPFToastr()">Submit</button>	 
 	 </form>
 </div>

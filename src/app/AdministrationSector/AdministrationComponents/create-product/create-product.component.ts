@@ -54,11 +54,13 @@ export class CreateProductComponent implements OnInit {
     formValue.append('Discount', this.createProductForm.get('Discount').value);
     formValue.append('Image', this.createProductForm.get('Image').value);
 
-    this._toastr.success('New product has added successfully.', 'Thank you!', {
-      timeOut: 3000,
-    });
-
     console.log(formValue);
+ }
+
+ submitPFToastr(){
+  this._toastr.success('New product has added successfully.', 'Thank you!', {
+    timeOut: 3000,
+  });
  }
 
 }

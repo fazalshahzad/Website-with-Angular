@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { DashboardComponent } from '../AdministrationComponents/dashboard/dashboard.component';
 import { UserListComponent } from '../AdministrationComponents/user-list/user-list.component';
 import { CreateProductComponent } from '../AdministrationComponents/create-product/create-product.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -28,7 +29,11 @@ import { CreateProductComponent } from '../AdministrationComponents/create-produ
     BrowserAnimationsModule,
     // ToastrModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(
+      {maxOpened:1,
+      autoDismiss:true}
+    ),
   ]
 })
 export class AdminDefaultModule { }
