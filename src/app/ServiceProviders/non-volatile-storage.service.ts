@@ -22,10 +22,10 @@ export class NonVolatileStorageService {
     return JSON.parse(localStorage.getItem('customer-cart') || '{}');
   }
 
-  setCustomerGatherItemsInfo(quantity:any){
+  setCustomerOtherItemsInfo(quantity:any){
     localStorage.setItem('customer-total-items', JSON.stringify(quantity));
   }
-  getCustomerGatherItemsInfo(){
+  getCustomerOtherItemsInfo(){
     return JSON.parse(localStorage.getItem('customer-total-item') || '{}');
   }
 }

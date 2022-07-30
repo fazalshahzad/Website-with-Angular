@@ -88,7 +88,7 @@ export class CartComponent implements OnInit {
       }
     });
     this._nonVolatileStorage.setProductInfo2LS(cartItemAddition);
-    this._nonVolatileStorage.setCustomerGatherItemsInfo(this.cartQuantity);
+    this._nonVolatileStorage.setCustomerOtherItemsInfo(this.cartQuantity);
     this.lsOfCart = this._nonVolatileStorage.getProductInfoFromLS();
   }
 
@@ -104,7 +104,7 @@ export class CartComponent implements OnInit {
       }
     });
     this._nonVolatileStorage.setProductInfo2LS(cartItemAddition);
-    this._nonVolatileStorage.setCustomerGatherItemsInfo(this.cartQuantity);
+    this._nonVolatileStorage.setCustomerOtherItemsInfo(this.cartQuantity);
   }
 
 }
