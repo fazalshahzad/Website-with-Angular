@@ -37,5 +37,5 @@ import { ProductAnalyticsComponent } from '../AdministrationComponents/product-a
        autoDismiss:true}
  ),
 ]
-// })
-// export class AdminDefaultModule {};
+ })
+export class AdminDefaultModule {};

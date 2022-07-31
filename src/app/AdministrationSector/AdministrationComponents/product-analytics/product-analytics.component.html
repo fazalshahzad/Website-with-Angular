@@ -15,9 +15,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td *ngFor="let _data of productDBFromDBCServ; let i = index"></td>
-				<td scope="row"></td> 
+			<tr *ngFor="let _data of productDBFromDBCServ; let i = index">
+				<td>{{1+i}}</td>
+				<td></td> 
 				<td></td>
 			</tr>
 		</tbody>
