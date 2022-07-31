@@ -8,20 +8,21 @@ import { UserLoginComponent } from './UserSection/user-login/user-login.componen
 import { UserSignUpComponent } from './UserSection/user-sign-up/user-sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductsComponent } from './MainPageComponents/products/products.component';
 import { GalleryComponent } from './MainPageComponents/gallery/gallery.component';
 import { HomeComponent } from './MainPageComponents/home/home.component';
 import { CartComponent } from './CartSection/cart/cart.component';
 import { ToastrModule } from 'ngx-toastr';
-import { AdminDefaultModule } from './AdministrationSector/admin-default/admin-default.module';
+// import {AdminDefaultModule } from './AdministrationSector/admin-default/admin-default.module'; //this one to copy?
 import { RouterModule } from '@angular/router';
 import { CreateProductComponent } from './AdministrationSector/AdministrationComponents/create-product/create-product.component';
+import { ProductAnalyticsComponent } from './AdministrationSector/AdministrationComponents/product-analytics/product-analytics.component';
 // import { LandingComponent } from './UserSection/landing/landing.component';
 // import { AngularFireModule } from '@angular/fire/compat';
 // import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
@@ -46,11 +47,10 @@ import { CreateProductComponent } from './AdministrationSector/AdministrationCom
     ProductsComponent,
     GalleryComponent,
     HomeComponent,
-    CartComponent, //must remember to remove all declaration of private sector like dashboard!
+    CartComponent
+    //must remember to remove all declaration of private sector like dashboard!
     
     
-  
-    // LandingComponent
   ],
   imports: [
     BrowserModule,
@@ -67,16 +67,13 @@ import { CreateProductComponent } from './AdministrationSector/AdministrationCom
     MatToolbarModule,
     // AngularFireModule.initializeApp(environment.Firebase),
     // AngularFireAnalyticsModule,
-    // AngularFirestoreModule
+    // AngularFirestoreModule,
     ToastrModule.forRoot(
       {maxOpened:1,
       autoDismiss:true}
     ),
-    AdminDefaultModule
+    // AdminDefaultModule
 
-    
-
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

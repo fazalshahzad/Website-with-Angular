@@ -1,5 +1,6 @@
-<div class="container my-3">
-	<h1 class="text-center">Add new product on website page</h1><hr>
+<div class="container my-5">
+	<h1 class="text-center ">Add New Products</h1>
+	<hr class="horizontal-line my-4">
 	<form (ngSubmit)="submitPF()" class="uswa my-5" [formGroup]="createProductForm">
 
 		<div class="mb-3">
@@ -25,17 +26,36 @@
 			<input type="text" class="form-control" id="exampleInputPassword1" formControlName="Des">
 		  </div>
 
+
+		  <div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Quantity</label>
+			<input type="number" class="form-control" id="exampleInputPassword1" formControlName="Quantity">
+
+			<div class="error  text-danger"
+			*ngIf="createProductForm.controls['Quantity'].invalid && (createProductForm.controls['Quantity'].dirty || createProductForm.controls['Name'].touched)">
+			<span *ngIf="createProductForm.controls['Quantity'].errors.minlength || createProductForm.controls['Quantity'].errors.maxlength ">
+			  <small>This field shouldn't contain any alphabets!</small></span>
+			<span *ngIf="(createProductForm.controls['Quantity'].errors.pattern)">
+			  Only numbers are allowed!</span>
+			<span *ngIf="createProductForm.controls['Quantity'].errors.required">
+			  <small>Field Required!</small>
+			</span>
+			</div>
+		
+		  </div>
+
+
 		  <div class="mb-3">
 			<label for="exampleInputPassword1" class="form-label">Price</label>
 			<input type="number" class="form-control" id="exampleInputPassword1" formControlName="Price">
 
 			<div class="error  text-danger"
-			*ngIf="createProductForm.controls['Name'].invalid && (createProductForm.controls['Name'].dirty || createProductForm.controls['Name'].touched)">
-			<span *ngIf="createProductForm.controls['Name'].errors.minlength || createProductForm.controls['Name'].errors.maxlength ">
-			  <small>Name between 4 to 20 characters!</small></span>
-			<span *ngIf="(createProductForm.controls['Name'].errors.pattern)">
-			  Only Numbers are allowed!</span>
-			<span *ngIf="createProductForm.controls['Name'].errors.required">
+			*ngIf="createProductForm.controls['Price'].invalid && (createProductForm.controls['Price'].dirty || createProductForm.controls['Name'].touched)">
+			<span *ngIf="createProductForm.controls['Price'].errors.minlength || createProductForm.controls['Price'].errors.maxlength ">
+			  <small>Number shouldn't have a currency sign!</small></span>
+			<span *ngIf="(createProductForm.controls['Price'].errors.pattern)">
+			  Only numbers are allowed!</span>
+			<span *ngIf="createProductForm.controls['Price'].errors.required">
 			  <small>Field Required!</small>
 			</span>
 			</div>

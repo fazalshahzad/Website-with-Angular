@@ -10,6 +10,7 @@ import { DashboardComponent } from '../AdministrationComponents/dashboard/dashbo
 import { UserListComponent } from '../AdministrationComponents/user-list/user-list.component';
 import { CreateProductComponent } from '../AdministrationComponents/create-product/create-product.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ProductAnalyticsComponent } from '../AdministrationComponents/product-analytics/product-analytics.component';
 
 
 
@@ -19,21 +20,22 @@ import { ToastrModule } from 'ngx-toastr';
     AdminDefaultComponent,
     DashboardComponent,
     UserListComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    ProductAnalyticsComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     BrowserModule,
-    // AppRoutingModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     // ToastrModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot(
-      {maxOpened:1,
-      autoDismiss:true}
-    ),
-  ]
-})
-export class AdminDefaultModule { }
+     ToastrModule.forRoot(
+       {maxOpened:1,
+       autoDismiss:true}
+ ),
+]
+// })
+// export class AdminDefaultModule {};

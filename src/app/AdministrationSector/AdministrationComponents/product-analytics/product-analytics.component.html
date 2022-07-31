@@ -1,0 +1,25 @@
+<div class="container my-5">
+	<h1 class="text-center">Product Analytics</h1>
+	<hr class="horizontal-line my-4">
+	<table class="table my-0 bg-info">
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">Name</th>
+				<th scope="col">Description</th>
+				<th scope="col">Price</th>
+				<th scope="col">Available Quantity</th>
+				<!-- <th scope="col">Selected Quantity</th> -->
+				<!-- <th scope="col">Final Quantity</th> -->
+				<th scope="col">Discount</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td *ngFor="let _data of productDBFromDBCServ; let i = index"></td>
+				<td scope="row"></td> 
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
